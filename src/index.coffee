@@ -6,6 +6,8 @@ options:
   subdomain
   tags
   auth (username, password)
+  verbose: true/false 
+  
 ###
 module.exports.register = (plugin, options = {}, cb) ->
 
