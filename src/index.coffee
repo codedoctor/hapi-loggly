@@ -16,7 +16,7 @@ module.exports.register = (plugin, options = {}, cb) ->
     # DO STUFF HERE
   logglyClient = null
 
-  if options.token and options.username and options.password
+  if options.token or (options.auth and options.auth.username and options.auth.password)
     logglyClient = loggly.createClient
         token: options.token
         subdomain: options.subdomain
@@ -24,7 +24,7 @@ module.exports.register = (plugin, options = {}, cb) ->
         json: true
         auth: options.auth
   else
-    console.log "Remote logging to loggly.com DISABLED - missing LOGGLYTOKEN, LOGGLYUSERNAME, LOGGLYPASSWORD"
+    console.log "Remote logging to loggly.com DISABLED - missing LOGGLYTOKEN or LOGGLYUSERNAME, LOGGLYPASSWORD"
 
   registerLog = (eventEmitter,eventName = "log") ->
     eventEmitter.on eventName, (event = {}, tags = {}) ->
