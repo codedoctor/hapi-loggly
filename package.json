@@ -1,7 +1,7 @@
 {
   "name": "hapi-loggly",
   "description": "A HAPI plugin to write logs to loggly.com.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": false,
   "main": "lib/index.js",
   "repository": {
@@ -15,9 +15,9 @@
     "test": "node_modules/.bin/grunt testandcoverage"
   },
   "dependencies": {
-   "loggly" : "1.0.4",     
+    "loggly": "1.0.4",
     "underscore": ">=1.6.0"
-    },
+  },
   "peerDependencies": {
     "hapi": ">=6.2.1"
   },
