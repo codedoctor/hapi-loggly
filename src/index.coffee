@@ -28,11 +28,28 @@ module.exports.register = (plugin, options = {}, cb) ->
 
   registerLog = (eventEmitter,eventName = "log") ->
     eventEmitter.on eventName, (event = {}, tags = {}) ->
-      data = event.data
-      data = msg: data if _.isString data
 
+      # event type 1
+      tagsArray = tags.tags
+      if event._logger
+        data = _.omit( ( _.last event._logger ), 'tags' )
+
+      # event type 2
+      if _.isUndefined data 
+        data =
+          data: event.data
+
+      if _.isUndefined tagsArray
+        tagsArray = _.keys( tags )
+      
+      # always make a ISO 8601 timestamp
+      if _.isUndefined event.timestamp
+        data.timestamp = new Date().toISOString()
+      else
+        data.timestamp = new Date(event.timestamp).toISOString()
+      
       if logglyClient
-        logglyClient.log data,_.keys(tags), (err) ->
+        logglyClient.log data, tagsArray, (err) ->
           ###
           THIS SHOULD TRIGGER new relic
           ###
