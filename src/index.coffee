@@ -37,7 +37,7 @@ module.exports.register = (plugin, options = {}, cb) ->
       # event type 2
       if _.isUndefined data 
         data =
-          data: event.data
+          message: event.data
 
       if _.isUndefined tagsArray
         tagsArray = _.keys( tags )
