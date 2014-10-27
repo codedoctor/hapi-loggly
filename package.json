@@ -1,7 +1,7 @@
 {
   "name": "hapi-loggly",
   "description": "A HAPI plugin to write logs to loggly.com.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": false,
   "main": "lib/index.js",
   "repository": {
