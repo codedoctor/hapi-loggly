@@ -12,11 +12,11 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "test": "node_modules/.bin/grunt testandcoverage"
+    "test": "grunt testandcoverage"
   },
   "dependencies": {
-    "loggly": "1.0.4",
-    "underscore": ">=1.6.0"
+    "loggly": "1.0.6",
+    "underscore": ">=1.7.0"
   },
   "peerDependencies": {
     "hapi": ">=6.2.1"
@@ -24,21 +24,21 @@
   "devDependencies": {
     "blanket": "1.1.6",
     "codo": "2.0.9",
-    "coffee-script": "1.7.1",
+    "coffee-script": "1.8.0",
     "deep-equal": "0.2.1",
     "grunt": "0.4.5",
     "grunt-cli": "0.1.13",
-    "grunt-concurrent": "0.5.0",
-    "grunt-contrib-coffee": "0.10.1",
+    "grunt-concurrent": "1.0.0",
+    "grunt-contrib-coffee": "0.12.0",
     "grunt-contrib-watch": "0.6.1",
-    "grunt-env": "0.4.1",
-    "grunt-mocha-cov": "0.2.1",
-    "grunt-mocha-test": "0.11.0",
+    "grunt-env": "0.4.2",
+    "grunt-mocha-cov": "0.3.0",
+    "grunt-mocha-test": "0.12.2",
     "grunt-release": "0.7.0",
-    "grunt-shell": "0.7.0",
-    "hapi": "6.2.1",
+    "grunt-shell": "1.1.1",
+    "hapi": "7.1.1",
     "matchdep": "0.3.0",
-    "mocha": "1.20.1",
+    "mocha": "2.0.1",
     "should": "4.0.4"
   },
   "config": {
@@ -48,5 +48,31 @@
       ],
       "data-cover-never": "node_modules"
     }
-  }
+  },
+  "gitHead": "b45e9e5d89c0bc02c09ba611767d6c6ef54276e2",
+  "bugs": {
+    "url": "https://github.com/codedoctor/hapi-loggly/issues"
+  },
+  "homepage": "https://github.com/codedoctor/hapi-loggly",
+  "_id": "hapi-loggly@1.0.7",
+  "_shasum": "4c8ec1ed5b52135fd57b9b78ab4b2c93ac5781c0",
+  "_from": "hapi-loggly@1.0.x",
+  "_npmVersion": "1.4.21",
+  "_npmUser": {
+    "name": "mwawrusch",
+    "email": "martin@wawrusch.com"
+  },
+  "maintainers": [
+    {
+      "name": "mwawrusch",
+      "email": "martin@wawrusch.com"
+    }
+  ],
+  "dist": {
+    "shasum": "4c8ec1ed5b52135fd57b9b78ab4b2c93ac5781c0",
+    "tarball": "http://registry.npmjs.org/hapi-loggly/-/hapi-loggly-1.0.7.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/hapi-loggly/-/hapi-loggly-1.0.7.tgz",
+  "readme": "ERROR: No README data found!"
 }
